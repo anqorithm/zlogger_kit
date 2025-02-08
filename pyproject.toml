@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "zlogger-kit"
+version = "0.0.1"
+description = ""
+authors = ["Abdullah Alqahtani <anqorithm@protonmail.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+pytz = "^2024.2"
+structlog = "^25.1.0"
+pydantic = "^2.10.6"
+uvicorn = "^0.34.0"
+fastapi = ">=0.109.0,<0.115.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+black = "^24.10.0"
+isort = "^5.13.2"
+mypy = "^1.14.1"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--strict-markers --tb=short --maxfail=3"
+testpaths = [
+    "tests"
+]
+python_files = [
+    "test_*.py",
+    "*_test.py"
+]
+python_classes = [
+    "Test*"
+]
+python_functions = [
+    "test_*"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
