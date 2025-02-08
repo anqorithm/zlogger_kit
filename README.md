@@ -245,65 +245,6 @@ poetry run uvicorn examples.example2:app --reload
 {"timestamp": "2025-02-09T01:26:48.971760+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/health", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/health", "ip": "127.0.0.1"}
 ```
 
-
-```json
-{"timestamp": "2025-02-09T01:26:43.047064+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:43.048061+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:48.822486+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/payments/xx", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/payments/xx", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:48.826271+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:48.971760+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/health", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/health", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:48.972386+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:49.179571+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:49.180813+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:49.325711+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:49.327166+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:52.853706+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/docs", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/docs", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:52.854178+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:53.099283+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/openapi.json", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/openapi.json", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:53.103588+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:55.427086+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:55.427798+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:55.658851+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:55.660167+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:55.828116+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:55.828691+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:56.001061+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:56.001544+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:56.167089+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:56.167591+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:56.321529+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:26:56.322359+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:00.966151+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/payments/x", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/payments/x", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:00.966840+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:06.637737+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments/x/refund", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments/x/refund", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:06.638379+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:06.865040+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments/x/refund", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments/x/refund", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:06.865722+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.021724+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments/x/refund", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments/x/refund", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.022278+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.215648+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments/x/refund", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments/x/refund", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.217003+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.385277+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments/x/refund", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments/x/refund", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.385928+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.537922+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments/x/refund", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments/x/refund", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.538546+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.697902+03:00", "module": "PAYMENT", "priority": "P20", "message": "POST http://127.0.0.1:8000/payments/x/refund", "level": "INFO", "operation": "request", "method": "POST", "url": "http://127.0.0.1:8000/payments/x/refund", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:07.698389+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:13.702432+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/health", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/health", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:13.702826+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:17.311468+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/health", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/health", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:17.311948+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:20.880413+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:20.881079+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:21.115057+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:21.115713+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:21.310658+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:21.311205+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:21.507362+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/", "ip": "127.0.0.1"}
-{"timestamp": "2025-02-09T01:27:21.508475+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
-
-```
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a PR.
