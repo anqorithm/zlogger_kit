@@ -11,7 +11,10 @@ router = APIRouter(
 
 logger = ZLog.init(
     ZLogConfig(
-        module=Module.PAYMENT.value, log_path="logs", time_zone="UTC", json_format=False
+        module=Module.PAYMENT.value,
+        log_path="logs",
+        time_zone="Asia/Riyadh",
+        json_format=True,
     )
 )
 
