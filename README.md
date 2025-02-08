@@ -1,7 +1,7 @@
 # ZLogger Kit
 
 <p align="center">
-  <img src="assets/zlogger-logo.svg" alt="ZLoggerKit Logo" width="400"/>
+  <img src="https://github.com/anqorithm/zlogger_kit/raw/main/assets/zlogger-logo.svg" alt="ZLoggerKit Logo" width="400"/>
 </p>
 
 [![Downloads](https://img.shields.io/pypi/dm/zlogger-kit)](https://pypi.org/project/zlogger-kit/)
