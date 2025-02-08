@@ -1,6 +1,8 @@
 # ZLogger Kit
 
-<img src="assets/zlogger-logo.svg" alt="ZLoggerKit Logo" width="400"/>
+<p align="center">
+  <img src="assets/zlogger-logo.svg" alt="ZLoggerKit Logo" width="400"/>
+</p>
 
 [![Downloads](https://img.shields.io/pypi/dm/zlogger-kit)](https://pypi.org/project/zlogger-kit/)
 [![PyPI version](https://img.shields.io/pypi/v/zlogger-kit)](https://img.shields.io/pypi/v/zlogger-kit)
