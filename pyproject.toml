@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "zlogger-kit"
-version = "0.0.4"
+version = "0.0.5"
 description = "ZLogger Kit is a simple logging kit that abstracts structlog to provide a more intuitive and flexible logging experience. It provides middleware for logging requests and responses, as well as a logger for logging messages, with priority levels P10, P20, P30, P40 for each log level: [WARNING, INFO, DEBUG, ERROR]."
 authors = ["Abdullah Alqahtani <anqorithm@protonmail.com>"]
 readme = "README.md"

@@ -7,7 +7,7 @@
 [![Downloads](https://img.shields.io/pypi/dm/zlogger-kit)](https://pypi.org/project/zlogger-kit/)
 [![PyPI version](https://img.shields.io/pypi/v/zlogger-kit)](https://img.shields.io/pypi/v/zlogger-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.4-blue)
+![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.5-blue)
 ![Python](https://img.shields.io/badge/Python->=3.11,<4.0-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI->=0.109.0,<0.115.8-blue)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -63,13 +63,12 @@ In this example, we will use the `ZLog` class to log messages to the console and
 
 
 ```python
-from zlogger_kit.zlog import ZLog
-from zlogger_kit.models import ZLogConfig
+from zlogger_kit import ZLog, ZLogConfig
 from examples.modules import Module
 
 config = ZLogConfig(
     module=Module.AUTH.value,
-    json_format=True,
+    json_format=False,
     log_path="logs/auth",
 )
 logger = ZLog.init(config)
@@ -134,9 +133,7 @@ In this example, we will use the `ZLogMiddleware` class to log requests and resp
 ```python
 from fastapi import FastAPI
 from examples.modules import Module
-from zlogger_kit.middleware import ZLogMiddleware
-from zlogger_kit.zlog import ZLog
-from zlogger_kit.models import ZLogConfig
+from zlogger_kit import ZLogMiddleware, ZLog, ZLogConfig
 from examples.routers.payment_router import router as payment_router
 
 app = FastAPI(title="Payment Service", description="API for payment processing")
@@ -146,7 +143,7 @@ zlogger = ZLog.init(
         module=Module.PAYMENT.value,
         log_path="logs",
         time_zone="Asia/Riyadh",
-        json_format=False,
+        json_format=True,
     )
 )
 
@@ -170,8 +167,7 @@ async def root():
 ```python
 from fastapi import APIRouter, HTTPException
 from examples.modules import Module
-from zlogger_kit.models import ZLogConfig
-from zlogger_kit.zlog import ZLog
+from zlogger_kit import ZLogConfig, ZLog
 
 router = APIRouter(
     prefix="/payments",

@@ -1,5 +1,4 @@
-from zlogger_kit.zlog import ZLog
-from zlogger_kit.models import ZLogConfig
+from zlogger_kit import ZLog, ZLogConfig
 from examples.modules import Module
 
 config = ZLogConfig(

@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 from examples.modules import Module
-from zlogger_kit.middleware import ZLogMiddleware
-from zlogger_kit.zlog import ZLog
-from zlogger_kit.models import ZLogConfig
+from zlogger_kit import ZLogMiddleware, ZLog, ZLogConfig
 from examples.routers.payment_router import router as payment_router
 
 app = FastAPI(title="Payment Service", description="API for payment processing")

@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from examples.modules import Module
-from zlogger_kit.models import ZLogConfig
-from zlogger_kit.zlog import ZLog
+from zlogger_kit import ZLogConfig, ZLog
 
 router = APIRouter(
     prefix="/payments",

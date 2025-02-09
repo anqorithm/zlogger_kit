@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class Module(str, Enum):
     AUTH = "AUTH"
     DATABASE = "DATABASE"
