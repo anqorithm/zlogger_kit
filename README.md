@@ -44,13 +44,13 @@ ZLogger Kit is an advanced logging kit that abstracts structlog to provide a mor
 ### Poetry (Recommended)
 
 ```bash
-poetry add zlogger-kit
+$ poetry add zlogger-kit
 ```
 
 ### Pip
 
 ```bash
-pip install zlogger-kit
+$ pip install zlogger-kit
 ```
 
 ## Quick Start
@@ -227,7 +227,7 @@ async def refund_payment(payment_id: str):
 #### Run the example
 
 ```bash
-poetry run uvicorn examples.example2:app --reload
+$ poetry run uvicorn examples.example2:app --reload
 ```
 
 #### TEXT Format (logs/payment-2025-02-08.log)
@@ -251,14 +251,10 @@ poetry run uvicorn examples.example2:app --reload
 ## Unit Tests
 
 ```bash
-poetry run pytest
+$ poetry run pytest
 ```
 
-![Unit Tests](./assets/1.png)
-
-
-
-
+![Unit Tests](https://github.com/anqorithm/zlogger_kit/raw/main/assets/1.png)
 
 
 ## Contributing
