@@ -7,7 +7,7 @@
 [![Downloads](https://img.shields.io/pypi/dm/zlogger-kit)](https://pypi.org/project/zlogger-kit/)
 [![PyPI version](https://img.shields.io/pypi/v/zlogger-kit)](https://img.shields.io/pypi/v/zlogger-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.1-blue)
+![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.2-blue)
 ![Python](https://img.shields.io/badge/Python->=3.11,<4.0-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI->=0.109.0,<0.115.8-blue)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -247,6 +247,19 @@ poetry run uvicorn examples.example2:app --reload
 {"timestamp": "2025-02-09T01:26:48.826271+03:00", "module": "PAYMENT", "priority": "P20", "message": "200", "level": "INFO", "operation": "response", "status_code": 200, "ip": "127.0.0.1"}
 {"timestamp": "2025-02-09T01:26:48.971760+03:00", "module": "PAYMENT", "priority": "P20", "message": "GET http://127.0.0.1:8000/health", "level": "INFO", "operation": "request", "method": "GET", "url": "http://127.0.0.1:8000/health", "ip": "127.0.0.1"}
 ```
+
+## Unit Tests
+
+```bash
+poetry run pytest
+```
+
+![Unit Tests](./assets/1.png)
+
+
+
+
+
 
 ## Contributing
 

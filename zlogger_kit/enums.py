@@ -50,3 +50,9 @@ class ZLogLevel(str, Enum):
         obj._value_ = value
         obj.priority = priority
         return obj
+
+
+class ZModule(str, Enum):
+    TEST_JSON_FORMAT = "test_json_format"
+    TEST_TEXT_FORMAT = "test_text_format"
+    OTHER = "other_module"
