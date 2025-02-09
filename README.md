@@ -7,14 +7,14 @@
 [![Downloads](https://img.shields.io/pypi/dm/zlogger-kit)](https://pypi.org/project/zlogger-kit/)
 [![PyPI version](https://img.shields.io/pypi/v/zlogger-kit)](https://img.shields.io/pypi/v/zlogger-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.3-blue)
+![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.4-blue)
 ![Python](https://img.shields.io/badge/Python->=3.11,<4.0-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI->=0.109.0,<0.115.8-blue)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://img.shields.io/badge/Tests-Pytest-green)](https://docs.pytest.org/)
 [![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)](https://coverage.py/)
 
-ZLogger Kit is an advanced logging kit that abstracts structlog to provide a more `intuitive` and `flexible` logging experience. It provides middleware for logging requests and responses, as well as a logger for logging messages, with priority levels `P10`, `P20`, `P30`, `P40` for each log level: [`WARNING`, `INFO`, `DEBUG`, `ERROR`].
+ZLogger Kit is a simple logging kit that abstracts structlog to provide a more `intuitive` and `flexible` logging experience. It provides middleware for logging requests and responses, as well as a logger for logging messages, with priority levels `P10`, `P20`, `P30`, `P40` for each log level: [`WARNING`, `INFO`, `DEBUG`, `ERROR`].
 
 ## Features
 
