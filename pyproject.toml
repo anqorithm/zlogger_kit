@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "zlogger-kit"
-version = "0.0.1"
+version = "0.0.2"
 description = ""
 authors = ["Abdullah Alqahtani <anqorithm@protonmail.com>"]
 readme = "README.md"

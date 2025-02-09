@@ -14,7 +14,7 @@
 [![Tests](https://img.shields.io/badge/Tests-Pytest-green)](https://docs.pytest.org/)
 [![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)](https://coverage.py/)
 
-ZLogger Kit is a well-rounded logging kit around structlog. It provides middleware for logging requests and responses, as well as a logger for logging messages, with priority levels for each log level: [WARNING, INFO, DEBUG, ERROR].
+ZLogger Kit is an advanced logging kit that abstracts structlog to provide a more `intuitive` and `flexible` logging experience. It provides middleware for logging requests and responses, as well as a logger for logging messages, with priority levels `P10`, `P20`, `P30`, `P40` for each log level: [`WARNING`, `INFO`, `DEBUG`, `ERROR`].
 
 ## Features
 
@@ -179,7 +179,10 @@ router = APIRouter(
 
 logger = ZLog.init(
     ZLogConfig(
-        module=Module.PAYMENT.value, log_path="logs", time_zone="UTC", json_format=False
+        module=Module.PAYMENT.value,
+        log_path="logs",
+        time_zone="Asia/Riyadh",
+        json_format=True,
     )
 )
 
