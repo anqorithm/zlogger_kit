@@ -116,7 +116,7 @@ config = ZLogConfig(
 
 #### TEXT Format
 
-```json
+```text
 [INFO]:[P20] [2025-02-09T00:27:14.375037+03:00] Starting authentication process {"level": "INFO", "client_ip": "192.168.1.100"}
 [INFO]:[P20] [2025-02-09T00:27:14.375318+03:00] Login successful {"level": "INFO", "user_id": "user_123"}
 [ERROR]:[P40] [2025-02-09T00:27:14.375380+03:00] Login failed {"level": "ERROR", "username": "suspicious_user", "ip": "10.0.0.5", "reason": "Invalid credentials"}
