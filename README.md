@@ -7,7 +7,7 @@
 [![Downloads](https://img.shields.io/pypi/dm/zlogger-kit)](https://pypi.org/project/zlogger-kit/)
 [![PyPI version](https://img.shields.io/pypi/v/zlogger-kit)](https://img.shields.io/pypi/v/zlogger-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.2-blue)
+![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.3-blue)
 ![Python](https://img.shields.io/badge/Python->=3.11,<4.0-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI->=0.109.0,<0.115.8-blue)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -18,6 +18,7 @@ ZLogger Kit is an advanced logging kit that abstracts structlog to provide a mor
 
 ## Features
 
+- **Easy to use and setup**
 - **Logging requests and responses** for all `requests` and `responses`
 - **Support Timezone** with the ability to set the timezone, default is `Asia/Riyadh`
 - **Logging messages** with priority levels (`P10`, `P20`, `P30`, `P40`)
@@ -27,7 +28,8 @@ ZLogger Kit is an advanced logging kit that abstracts structlog to provide a mor
 - **Logging with 2 different log formats**
     - **JSON**
     - **TEXT**
-- **Easy to use and setup**
+- **Pydantic** support for logging requests and responses to keep the data types and formats consistent
+- **Enums** for logging requests and responses to keep the data types and formats consistent
 
 
 ## Priority Levels
