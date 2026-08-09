@@ -137,72 +137,84 @@ class ZLog:
         with open(log_file, "a", encoding="utf-8") as f:
             f.write(log_content)
 
-    def debug(self, message: str, error: Exception = None, **kwargs) -> None:
+    def debug(self, message: str, error: Exception = None, correlation_id: str | None = None, transaction_id: str | None = None, **kwargs) -> None:
         """Write a debug level log message.
 
         Args:
             message (str): The log message.
             error (Exception, optional): Exception to log. Defaults to None.
+            correlation_id (str, optional): Correlation ID for tracing. Defaults to None.
+            transaction_id (str, optional): Transaction ID for tracing. Defaults to None.
             **kwargs: Additional fields to include in the log entry.
         """
         if error:
             kwargs["error"] = str(error)
-        self._write_log(message, level=ZLogLevel.DEBUG.value, **kwargs)
+        self._write_log(message, level=ZLogLevel.DEBUG.value, correlation_id=correlation_id, transaction_id=transaction_id, **kwargs)
 
-    def log(self, message: str, error: Exception = None, **kwargs) -> None:
+    def log(self, message: str, error: Exception = None, correlation_id: str | None = None, transaction_id: str | None = None, **kwargs) -> None:
         """Write an info level log message (alias for info).
 
         Args:
             message (str): The log message.
             error (Exception, optional): Exception to log. Defaults to None.
+            correlation_id (str, optional): Correlation ID for tracing. Defaults to None.
+            transaction_id (str, optional): Transaction ID for tracing. Defaults to None.
             **kwargs: Additional fields to include in the log entry.
         """
         if error:
             kwargs["error"] = str(error)
-        self._write_log(message, level=ZLogLevel.INFO.value, **kwargs)
+        self._write_log(message, level=ZLogLevel.INFO.value, correlation_id=correlation_id, transaction_id=transaction_id, **kwargs)
 
-    def info(self, message: str, error: Exception = None, **kwargs) -> None:
+    def info(self, message: str, error: Exception = None, correlation_id: str | None = None, transaction_id: str | None = None, **kwargs) -> None:
         """Write an info level log message.
 
         Args:
             message (str): The log message.
             error (Exception, optional): Exception to log. Defaults to None.
+            correlation_id (str, optional): Correlation ID for tracing. Defaults to None.
+            transaction_id (str, optional): Transaction ID for tracing. Defaults to None.
             **kwargs: Additional fields to include in the log entry.
         """
         if error:
             kwargs["error"] = str(error)
-        self._write_log(message, level=ZLogLevel.INFO.value, **kwargs)
+        self._write_log(message, level=ZLogLevel.INFO.value, correlation_id=correlation_id, transaction_id=transaction_id, **kwargs)
 
-    def warn(self, message: str, error: Exception = None, **kwargs) -> None:
+    def warn(self, message: str, error: Exception = None, correlation_id: str | None = None, transaction_id: str | None = None, **kwargs) -> None:
         """Write a warning level log message.
 
         Args:
             message (str): The log message.
             error (Exception, optional): Exception to log. Defaults to None.
+            correlation_id (str, optional): Correlation ID for tracing. Defaults to None.
+            transaction_id (str, optional): Transaction ID for tracing. Defaults to None.
             **kwargs: Additional fields to include in the log entry.
         """
         if error:
             kwargs["error"] = str(error)
-        self._write_log(message, level=ZLogLevel.WARNING.value, **kwargs)
+        self._write_log(message, level=ZLogLevel.WARNING.value, correlation_id=correlation_id, transaction_id=transaction_id, **kwargs)
 
-    def error(self, message: str, error: Exception = None, **kwargs) -> None:
+    def error(self, message: str, error: Exception = None, correlation_id: str | None = None, transaction_id: str | None = None, **kwargs) -> None:
         """Write an error level log message.
 
         Args:
             message (str): The log message.
             error (Exception, optional): Exception to log. Defaults to None.
+            correlation_id (str, optional): Correlation ID for tracing. Defaults to None.
+            transaction_id (str, optional): Transaction ID for tracing. Defaults to None.
             **kwargs: Additional fields to include in the log entry.
         """
         if error:
             kwargs["error"] = str(error)
-        self._write_log(message, level=ZLogLevel.ERROR.value, **kwargs)
+        self._write_log(message, level=ZLogLevel.ERROR.value, correlation_id=correlation_id, transaction_id=transaction_id, **kwargs)
 
-    def network_request(self, request: ZNetworkRequest, ip: str = None) -> None:
+    def network_request(self, request: ZNetworkRequest, ip: str = None, correlation_id: str | None = None, transaction_id: str | None = None) -> None:
         """Log a network request.
 
         Args:
             request (ZNetworkRequest): The network request to log.
             ip (str, optional): IP address associated with the request. Defaults to None.
+            correlation_id (str, optional): Correlation ID for tracing. Defaults to None.
+            transaction_id (str, optional): Transaction ID for tracing. Defaults to None.
         """
         message = f"{request.method} {request.url}"
         self._write_log(
@@ -212,14 +224,18 @@ class ZLog:
             method=request.method,
             url=request.url,
             ip=ip,
+            correlation_id=correlation_id,
+            transaction_id=transaction_id,
         )
 
-    def network_response(self, response: ZNetworkResponse, ip: str = None) -> None:
+    def network_response(self, response: ZNetworkResponse, ip: str = None, correlation_id: str | None = None, transaction_id: str | None = None) -> None:
         """Log a network response.
 
         Args:
             response (ZNetworkResponse): The network response to log.
             ip (str, optional): IP address associated with the response. Defaults to None.
+            correlation_id (str, optional): Correlation ID for tracing. Defaults to None.
+            transaction_id (str, optional): Transaction ID for tracing. Defaults to None.
         """
         message = f"{response.status_code}"
         self._write_log(
@@ -228,4 +244,6 @@ class ZLog:
             operation=ZNetworkOperation.RESPONSE.value,
             status_code=response.status_code,
             ip=ip,
+            correlation_id=correlation_id,
+            transaction_id=transaction_id,
         )
