@@ -171,3 +171,13 @@ class TestZLog(TestCase):
             return True
         except json.JSONDecodeError:
             return False
+
+
+def test_version_matches_pyproject():
+    import tomllib
+    from pathlib import Path
+
+    import zlogger_kit
+
+    pyproject = tomllib.loads((Path(__file__).parent.parent / "pyproject.toml").read_text())
+    assert zlogger_kit.__version__ == pyproject["tool"]["poetry"]["version"]

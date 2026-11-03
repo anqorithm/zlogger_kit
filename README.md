@@ -7,7 +7,7 @@
 [![Downloads](https://img.shields.io/pypi/dm/zlogger-kit)](https://pypi.org/project/zlogger-kit/)
 [![PyPI version](https://img.shields.io/pypi/v/zlogger-kit)](https://img.shields.io/pypi/v/zlogger-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![ZLogger Kit](https://img.shields.io/badge/ZLogger_Kit-0.0.5-blue)
+![ZLogger Kit](https://img.shields.io/github/v/release/anqorithm/zlogger_kit?label=ZLogger%20Kit)
 ![Python](https://img.shields.io/badge/Python->=3.11,<4.0-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI->=0.109.0,<0.115.8-blue)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
