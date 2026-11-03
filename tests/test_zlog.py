@@ -115,6 +115,28 @@ class TestZLog(TestCase):
         self.assertEqual(response_log["status_code"], 200)
         self.assertEqual(response_log["ip"], "127.0.0.1")
 
+    def test_tracing_ids(self):
+        test_time = datetime(2024, 1, 1, tzinfo=ZoneInfo("Asia/Riyadh"))
+        self.logger.set_current_time(test_time)
+
+        self.logger.info("No ids")
+        self.logger.info("With ids", correlation_id="c-1", transaction_id="t-1")
+        request = ZNetworkRequest(method="GET", url="https://api.example.com")
+        self.logger.network_request(request, correlation_id="c-2")
+
+        log_file = os.path.join(
+            self.test_dir, f"{ZModule.TEST_JSON_FORMAT.value}-2024-01-01.log"
+        )
+        with open(log_file, "r") as f:
+            plain, with_ids, request_log = [json.loads(line) for line in f]
+
+        self.assertNotIn("correlation_id", plain)
+        self.assertNotIn("transaction_id", plain)
+        self.assertEqual(with_ids["correlation_id"], "c-1")
+        self.assertEqual(with_ids["transaction_id"], "t-1")
+        self.assertEqual(request_log["correlation_id"], "c-2")
+        self.assertNotIn("transaction_id", request_log)
+
     def test_text_format_logging(self):
         config = ZLogConfig(
             module=ZModule.TEST_TEXT_FORMAT,

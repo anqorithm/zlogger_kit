@@ -111,6 +111,11 @@ class ZLog:
         """
         log_file = self._get_log_file_path()
 
+        # Only log tracing ids when given, so existing log lines keep their shape.
+        for key in ("correlation_id", "transaction_id"):
+            if kwargs.get(key) is None:
+                kwargs.pop(key, None)
+
         level = kwargs.get("level", "")
         priority = ""
         try:
