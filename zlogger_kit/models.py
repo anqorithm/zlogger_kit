@@ -9,12 +9,14 @@ class ZLogConfig(BaseModel):
         time_zone: Timezone for log timestamps (default: "Asia/Riyadh")
         json_format: Whether to output logs in JSON format (default: True)
         log_path: Directory path for log files (default: "logs")
+        priorities: Optional per-level priority overrides, e.g. {"ERROR": "P1"}
     """
 
     module: str
     time_zone: str = "Asia/Riyadh"
     json_format: bool = True
     log_path: str = "logs"
+    priorities: dict[str, str] = {}
 
 
 class ZNetworkRequest(BaseModel):

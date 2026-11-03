@@ -41,6 +41,8 @@ ZLogger Kit is a simple logging kit that abstracts structlog to provide a more `
 | WARNING | Warning level logging with medium-high priority. | P30      |
 | ERROR   | Error level logging with highest priority. | P40      |
 
+Override any of them per logger with `ZLogConfig(module="AUTH", priorities={"ERROR": "P1"})`.
+
 ## Installation
 
 ### Poetry (Recommended)

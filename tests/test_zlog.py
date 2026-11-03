@@ -137,6 +137,25 @@ class TestZLog(TestCase):
         self.assertEqual(request_log["correlation_id"], "c-2")
         self.assertNotIn("transaction_id", request_log)
 
+    def test_custom_priorities(self):
+        logger = ZLog(
+            ZLogConfig(
+                module=ZModule.OTHER,
+                log_path=self.test_dir,
+                priorities={"ERROR": "P1"},
+            )
+        )
+        logger.set_current_time(datetime(2024, 1, 1, tzinfo=ZoneInfo("Asia/Riyadh")))
+        logger.error("Custom")
+        logger.info("Default")
+
+        log_file = os.path.join(self.test_dir, f"{ZModule.OTHER.value}-2024-01-01.log")
+        with open(log_file, "r") as f:
+            error_log, info_log = [json.loads(line) for line in f]
+
+        self.assertEqual(error_log["priority"], "P1")
+        self.assertEqual(info_log["priority"], ZLogLevel.INFO.priority)
+
     def test_text_format_logging(self):
         config = ZLogConfig(
             module=ZModule.TEST_TEXT_FORMAT,

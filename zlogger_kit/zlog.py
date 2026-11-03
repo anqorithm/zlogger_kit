@@ -120,7 +120,7 @@ class ZLog:
         priority = ""
         try:
             level_enum = ZLogLevel(level)
-            priority = level_enum.priority
+            priority = self._config.priorities.get(level, level_enum.priority)
             level_prefix = f"[{level}]:[{priority}]"
         except ValueError:
             level_prefix = ""
